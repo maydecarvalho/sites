@@ -181,38 +181,3 @@ footer a:hover {
     color: var(--cor1);
     text-decoration: underline;
 }
-/* CELULAR */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* HEADER */
-eader {
-    
-    height: 20vh;
-    text-align: center;
-
-}
-eader>h1 {
-color: var(--cor3);
-font-family: var(--fonte2);
-    padding-top: 2%;
-}
-eader>p {
-    font: 1.2em var(--fonte0);
-   
-
-}
-
-
- 
