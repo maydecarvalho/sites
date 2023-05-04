@@ -7,10 +7,9 @@
     --cor3: #6592c9;
     --cor4: #49997d;
     --cor5: #00836a;
-    --cor6: #0a9077b3;
-    --cor7: #3d3d3d;
-    --cor8: #ffffff;
-    --cor9: #000000;
+    --cor6: #3d3d3d;
+    --cor7: #ffffff;
+    --cor8: #000000;
 
     --font1: 'Source Sans Pro', sans-serif;
 }
@@ -20,36 +19,179 @@
     margin: 0px;
     padding: 0px;
 }
-
 /*-- HEADER --*/
 header {
-    background-color: var(--cor8);
     border: 1px solid var(--cor1);
-    height: 4rem;
+    height: 4em;
 }
-header section {
-    margin: 0% 18%;
-    display: flex;
+header > section {
     align-items: center;
-    justify-content: space-between;
+    display: flex;
     height: 100%;
+    justify-content: space-around;
 }
-header section > a {
-    color: var(--cor7);
-    font-size: 1.4em;
+header > section > a {
+    color: var(--cor6);
+    font-size: 1.5em;
     text-decoration: none;
-    letter-spacing: 1px;
 }
-header section a > span {
+header > section > a span {
     color: var(--cor3);
 }
-header section > nav {
-    
+header > section nav > a {
+    color: var(--cor6);
+    padding: 0 1em;
+    text-decoration: none;
+}
+header > section nav > a:hover {
+    border-bottom: 2px solid var(--cor3);
 }
 /*-- MAIN --*/
-
-/*-- MAIN SOBRE --*/
-
-/*=== Rodape ===*/
-
-/*=== CODIGO PAGINA RESPONSIVA CELULAR ===*/
+main #banner {
+    align-items: center;
+    background: url('../img/img-fundo.jpg') no-repeat top;
+    background-size: cover;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    text-align: center; 
+}
+main #banner > div {
+    background-color: rgba(10, 144, 119, 0.702);
+    border: 1px solid var(--cor1);
+    border-radius: 5px;
+    color: var(--cor7);
+    height: 28vh;
+    width: 35vw;
+}
+main #banner > div > h1 {
+    font-size: 3em;
+    margin: 0.4em auto;
+}
+main #banner > div > p {
+    font-size: 1.4em;
+}
+main .titulo {
+    margin: auto;
+    text-align: center; 
+    width: 80%;
+}
+main .titulo h2 {
+    font-size: 2.5em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    padding-top: 1.7em;
+}
+main .titulo p {
+    padding: 1em 0;
+}
+/*-- PICTURE --*/
+main > picture {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 2em 0;
+}
+main > picture > figure > a > img {
+    filter: grayscale(0);
+    object-fit: cover;
+    transition: 1.0s; /* Tempo de transição da mudança de cor */
+    height: 35vh;
+    width: 100%;
+}
+main > picture > figure > a > img:hover {
+    filter: grayscale(1);
+}
+main > picture > figure > figcaption {
+    border-bottom: 2px solid var(--cor5);
+    text-align: center;
+    padding: 1em;
+}
+/*-- ARTICLE --*/
+article {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1em;
+}
+article > section {
+    border: 1px solid var(--cor1);
+    box-shadow: 3px -3px 7px rgba(0, 0, 0, 0.374);
+    display: flex;
+    margin: auto;
+    width: 45%;
+}
+article > section > div {
+    flex: 1;
+    text-align: center;
+}
+article > section > div > h3 {
+   padding: 1em;
+}
+article > section img {
+    height: 25vh;
+    width: 12vw;
+}
+/*-- FOOTER --*/
+footer {
+    background-image: linear-gradient(to right bottom, #50b8c2, #50b9c2af, #50b9c230);
+}
+footer > picture > h4 { 
+    color: var(--cor8);
+    font-size: 1.3em;
+    padding-top: 0.5em;
+    text-align: center;   
+}
+footer > picture figure {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+}
+footer > picture> figure > div {
+    display: flex;
+    align-items: center;
+}
+footer > picture > figure > div figcaption { 
+    color: var(--cor7);
+    text-align: center;
+    width: 15vw;
+}
+footer > picture > figure > div figcaption > a {
+    color: var(--cor7);
+    text-decoration: none;
+}
+footer picture > figure > div img {
+    border-radius: 10%;
+    width: 3vw;
+}
+body #rodape {
+    background-color: var(--cor2);
+    border-top: 1px solid var(--cor1);
+    color: var(--cor7);
+    font-weight: 600;
+    padding: 0.5em;
+    text-align: center;
+}
+body #seta img {
+    border: 1px solid var(--cor8);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 15px;
+    right: 30px;
+    width: 4%;
+}
+/*-- CELULAR --*/
+@media screen and (min-width: 300px) and (max-width: 768px)  {
+    header > section > a {display:flex; flex-direction: column;}
+    main #banner > div {height: 25%; width: 100%;}
+    main .titulo h2 {font-size: 1.9em;}
+    main > picture {flex-direction: column;}
+    main > picture > figure > figcaption { margin: 0 2em;}
+    article > section {padding-bottom: 1em; width: 90vw;}
+    article > section img {display: none;}
+    footer > picture figure {flex-direction: column;}
+    footer > picture > figure > div figcaption {width: 100vw;}
+    footer picture > figure > div img {margin: 0.5em; height: 5vh; width: 10vw;}
+    body #rodape {padding: 1.7em;}
+    body #seta img {bottom: 18px; width: 12%;}
+}
