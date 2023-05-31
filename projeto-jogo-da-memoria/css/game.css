@@ -72,8 +72,8 @@ header {
     opacity: 0.5;
 }
 
-@media screen and (width <= 450px) {
+@media screen and (min-width: 320px) and (max-width: 450px) {
     .grid {
-        grid-template-columns: repeat(4, 4.5rem);
+        grid-template-columns: repeat(4, 4rem);
     }
 }
